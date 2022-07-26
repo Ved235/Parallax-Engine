@@ -3,7 +3,7 @@ import { Box, Container, Heading, Text, Link } from 'theme-ui';
 const CALL_TO_ACTION_DATA = {
   title: 'Want to talk to our Support team?',
   text:
-    'Discover how team can help you power-up your influencer photo marketing program.',
+    'We are there for you!',
   button: {
     link: '#',
     label: 'Ask you Question',

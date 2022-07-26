@@ -6,33 +6,33 @@ import icon3 from 'assets/why-choose-3.svg';
 import icon4 from 'assets/why-choose-4.svg';
 const WHY_CHOOSE_DATA = {
   blockTitle: {
-    title: 'Why you choose TheCoin',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+    title: 'Why you choose Us ?',
+    text: 'Simple: We will increase your profits',
   },
   posts: [
     {
       icon: icon1,
       title: 'Great Market Value',
       text:
-        'Lorem ipsum dolor sit amet with consectetur adipisicing elit the help eiusmod tempor.',
+        'We provide you with the most reasonably priced tool to increase your profit TEN folds!',
     },
     {
       icon: icon2,
-      title: 'Verified Mining Process',
+      title: 'Verified Process',
       text:
-        'Lorem ipsum dolor sit amet with consectetur adipisicing elit the help eiusmod tempor.',
+        'Parralax has been verfied and tested my major firms around the globe, this also includes A.I leaders!',
     },
     {
       icon: icon3,
-      title: 'Fastest Miner',
+      title: 'Fastest Tool',
       text:
-        'Lorem ipsum dolor sit amet with consectetur adipisicing elit the help eiusmod tempor.',
+        'Our team of A.I leaders have provided  with the most optimized, efficient and lightning technology',
     },
     {
       icon: icon4,
       title: 'Secure Transaction',
       text:
-        'Lorem ipsum dolor sit amet with consectetur adipisicing elit the help eiusmod tempor.',
+        'Privacy! That’s Parallax Engine; we value the privacy and cofidentialy of our clients. No data is collected for any pruposes.',
     },
   ],
 };

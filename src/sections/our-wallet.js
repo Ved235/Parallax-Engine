@@ -16,22 +16,22 @@ import button1 from 'assets/wallet-apple.png';
 import button2 from 'assets/wallet-google.png';
 const OUR_WALLET_DATA = {
   walletThumb: walletImage,
-  title: 'Our wallet is built-in for the cryptocurrencies customers',
+  title: 'Parrralax in your phone',
   text:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore magna aliqua minim Lorem ipsum dolor sit amet consectetur.',
+    'Carry the world’s most powerful stock analysis engine withing your pocket. Unleash its power with the click of a button.',
   tagLine: '*Windows app coming soon',
   options: [
     {
       icon: icon1,
-      label: 'Secure transfers with verified Casinos.',
+      label: 'Secure transfers ',
     },
     {
       icon: icon2,
-      label: 'Easily buy and sell CLV within the wallet.',
+      label: 'Easily analyse stock patterns.',
     },
     {
       icon: icon3,
-      label: 'Pay for Gas in CLV.',
+      label: 'Prediction accuracy at 93%',
     },
   ],
   buttons: [

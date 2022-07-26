@@ -4,26 +4,26 @@ import line from 'assets/roadmap-line.svg';
 const ROAD_MAP_DATA = {
   blockTitle: {
     title: 'Meet the Roadmap',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+    text: '',
   },
   posts: [
     {
-      date: '29 January 2019',
-      title: 'Join new server hosting',
+      date: '29 January 2023',
+      title: 'Community Building',
       text:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor labore dolore',
+        'Building one of the finest finance communities with experts in analysis, investors and professors at Wharton.',
     },
     {
-      date: '17 April 2019',
-      title: 'Mining coin with latest gpu',
+      date: '17 April 2023',
+      title: 'In built trader ',
       text:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor labore dolore',
+        'Providing you with a trustworthy trading application with zero brokerage and a in-built stock analysis.',
     },
     {
-      date: '31 October 2019',
-      title: 'Turn new website with design',
+      date: '31 October 2023',
+      title: 'Turn new design',
       text:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor labore dolore',
+        'Making a U.I loved by all.',
     },
   ],
 };

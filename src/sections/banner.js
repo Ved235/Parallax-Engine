@@ -5,16 +5,13 @@ import ModalVideo from 'react-modal-video';
 import { IoIosPlayCircle } from 'react-icons/io';
 import BannerImage from 'assets/banner-1.png';
 const BANNER_DATA = {
-  title: 'Welcome to next level Cryptocurrencies Token with faster transfer',
+  title: 'Welcome to next level Stock Analysis with Parralax ',
   text:
-    'We helps brands & agencies manage top-performing influencer programs: talent discovery & qualification, relationship management, automated campaign reporting, performance measurement and competitive benchmarking.',
-  button: {
-    link: '#',
-    label: 'Get Token',
-  },
+    'We helps investors and agencies manage top-performing stock options. Use of Artificial Intelligence and Data Science techniques enable us to forecast profitable stock investments.',
+
   videoBtn: {
     link: '#',
-    label: 'White paper',
+    label: 'Earn More',
   },
   bannerImage: BannerImage,
 };
@@ -33,10 +30,6 @@ const Banner = () => {
           <Heading as="h1">{title}</Heading>
           <Text as="p">{text}</Text>
           <Box sx={styles.btnWrap}>
-            <Link href={button.link} sx={styles.btn}>
-              {button.label}
-            </Link>
-
             <>
               <ModalVideo
                 channel="youtube"
@@ -44,7 +37,7 @@ const Banner = () => {
                 videoId="ZNA9rmDsYVE"
                 onClose={() => setVideoOpen(false)}
               />
-              <Button sx={styles.videoBtn} onClick={handleClick}>
+              <Button sx={styles.btn} onClick={handleClick}>
                 {videoBtn.label}
                 <IoIosPlayCircle />
               </Button>
@@ -58,6 +51,7 @@ const Banner = () => {
             alt="Banner Mockup"
             width={740}
             height={442}
+        
           />
         </Box>
       </Container>

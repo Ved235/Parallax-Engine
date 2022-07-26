@@ -10,7 +10,7 @@ const WORLDWIDE_USER_DATA = {
   title: 'We have more than 3 Bilion worldwide user',
   text:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore',
-  tagline: 'Licensed gambling jurisdictions',
+  tagline: 'Licensed juridiscations',
   posts: [
     {
       icon: flag1,

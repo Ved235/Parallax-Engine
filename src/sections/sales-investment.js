@@ -5,7 +5,7 @@ const SALES_INVESTMENT_DATA = {
   image: graph,
   title: 'Total Investment sale from last year transaction',
   text:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore magna aliqua minim Lorem ipsum dolor sit amet consectetur.',
+    'Our tool has the highest acceptance rate by financial firms around the world. It also attracts the high traffic in terms of paid users.',
   button: {
     link: '#',
     label: 'Learn More',
