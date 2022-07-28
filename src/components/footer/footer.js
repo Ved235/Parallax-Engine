@@ -1,74 +1,93 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Box, Flex, Heading, Link } from 'theme-ui';
+import { jsx, Box, Text, Container } from 'theme-ui';
+import Logo from 'components/logo';
+import { Link } from 'components/link';
+import FooterWidget from 'components/footer/widget';
+import { menuItems, footerNav } from './footer.data';
+import { rgba } from 'polished';
 
-import FOOTER_DATA from './footer.data';
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <Box as="footer" sx={styles.footer}>
+    <footer sx={styles.footer}>
       <Container>
-        <Flex sx={styles.row}>
-          {FOOTER_DATA.map(({ title, menuItem }, index) => (
-            <Box sx={styles.widget} key={`footer-widget-key-${index}`}>
-              <Heading as="h2">{title}</Heading>
-              <ul>
-                {menuItem.map(({ link, label }, index) => (
-                  <li key={`footer-menu-item-key-${index}`}>
-                    <Link href={link}>{label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </Box>
+        <Box sx={styles.footerTopInner}>
+          {menuItems.map(({ id, title, items }) => (
+            <FooterWidget key={id} title={title} items={items} />
           ))}
-        </Flex>
+        </Box>
       </Container>
-    </Box>
-  );
-};
+      <Container>
+        <Box sx={styles.footerInner}>
+          <Box sx={styles.copyright}>
+            <Logo sx={styles.logo} light />
+            <Text as="span">
+              Copyright by {new Date().getFullYear()} Parallax Engine
+            </Text>
+          </Box>
 
-export default Footer;
+
+        </Box>
+      </Container>
+    </footer>
+  );
+}
 
 const styles = {
   footer: {
-    pt: ['65px', null, '75px', null, '90px'],
-    pb: ['25px', null, '35px', '25px', '80px'],
+    backgroundColor: '#1D2146',
+    pt: 9,
   },
-  row: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    px: [0, null, null, '40px', 0, '60px'],
+  footerTopInner: {
+    gap: [50, null, null, null, 0, 50],
+    display: ['grid'],
+    gridTemplateColumns: [
+      'repeat(2, 1fr)',
+      null,
+      null,
+      'repeat(3, 1fr)',
+      'repeat(5, 1fr)',
+    ],
+    mb: [null, null, null, 7],
   },
-  widget: {
-    flex: ['0 0 50%', null, '0 0 33.33%', null, '0 0 20%'],
-    mb: ['33px', null, null, '45px', 0],
-    h2: {
-      m: 0,
-      lineHeight: 1.35,
-      fontSize: ['17px', null, '18px'],
-      letterSpacing: '-0.5px',
-      color: 'heading',
-      fontWeight: 500,
+  footerInner: {
+    borderTop: [null, null, null, `1px solid ${rgba('white', 0.15)}`],
+    display: ['block', null, 'flex'],
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: ['30px 0 20px', null, null, '30px 0 35px', '35px 0 40px'],
+  },
+  copyright: {
+    display: ['flex'],
+    alignItems: 'center',
+    flexDirection: ['column', null, null, null, 'row'],
+    span: {
+      fontSize: '14px',
+      lineHeight: 1.29,
+      color: 'white',
+      mt: ['18px', '18px', '7px'],
     },
-    ul: {
-      m: 0,
-      p: 0,
-      listStyle: 'none',
-      mt: ['20px', null, null, '25px', '30px'],
-      li: {
-        mt: ['10px', null, '12px'],
+  },
+  logo: {
+    mr: 3,
+  },
+  footerNav: {
+    listStyle: 'none',
+    margin: ['15px 0 0', '15px 0 0', '0'],
+    padding: 0,
+    display: ['flex'],
+    flexWrap: ['wrap', null, null, 'unset'],
+    justifyContent: ['center', null, 'flex-start'],
+    'li + li': {
+      ml: ['18px', null, '20px'],
+      '@media only screen and (max-width: 400px)': {
+        mb: '10px',
       },
-      a: {
-        display: 'block',
-        color: '#02073E',
-        opacity: 0.8,
-        fontSize: '14px',
-        lineHeight: 1.7,
-        transition: 'all 500ms ease',
-        '&:hover': {
-          opacity: 1,
-        },
-      },
+    },
+    a: {
+      color: 'white',
+      fontSize: [1, null, null, 2],
+      textDecoration: 'none',
     },
   },
 };

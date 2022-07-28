@@ -1,23 +1,14 @@
-const MENU_DATA = [
+export default [
   {
-    path: 'banner',
+    path: 'home',
     label: 'Home',
+  },
+  {
+    path: 'features',
+    label: 'Features',
   },
   {
     path: 'services',
     label: 'Services',
-  },
-  {
-    path: 'roadmap',
-    label: 'Roadmap',
-  },
-  {
-    path: 'downloads',
-    label: 'Downloads',
-  },
-  {
-    path: 'contact',
-    label: 'Contact',
-  },
+  }
 ];
-export default MENU_DATA;

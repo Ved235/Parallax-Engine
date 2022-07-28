@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function Seo({
-  description = '',
-  author = 'Scottish High International School',
+export default function SEO({
+  description = 'Parallax Engine',
+  author = 'Scottish High ',
   meta,
-  title = 'Parallax Engine',
+  title = 'Parllax Engine',
 }) {
   const metaData = [
     {
@@ -51,7 +51,7 @@ export default function Seo({
   );
 }
 
-Seo.defaultProps = {
+SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,

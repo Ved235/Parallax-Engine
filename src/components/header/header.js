@@ -1,60 +1,78 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Flex,Text } from 'theme-ui';
-import { Link as ScrollLink } from 'react-scroll';
+import { jsx, Container, Button } from 'theme-ui';
+import { useState } from 'react';
+import Sticky from 'react-stickynode';
+import { DrawerProvider } from 'contexts/drawer/drawer-provider';
+import NavbarDrawer from './navbar-drawer';
 import Logo from 'components/logo';
-import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import MobileDrawer from './mobileDrawer';
-import MENU_DATA from './header.data';
-import logoDark from 'assets/logo.svg';
+import { NavLink } from 'components/link';
 
-export default function Header({ className }) {
+import menuItems from './header.data';
+
+export default function Header() {
+  const [state, setState] = useState({
+    isMobileMenu: false,
+    isSticky: false,
+  });
+  const handleStateChange = (status) => {
+    status.status === Sticky.STATUS_FIXED
+      ? setState({ ...state, isSticky: true })
+      : setState({ ...state, isSticky: false });
+  };
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0")
+  };
+
   return (
     <DrawerProvider>
-      <header sx={styles.header} className={className}>
-        <Container sx={styles.container}>
-          <Text>Parallax Engine</Text>
-
-          <Flex as="nav" sx={styles.nav}>
-            {MENU_DATA.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                sx={styles.nav.navLink}
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
-              >
-                {label}
-              </ScrollLink>
-            ))}
-          </Flex>
-          <MobileDrawer />
-        </Container>
-      </header>
+      <Sticky
+        enabled={true}
+        top={0}
+        activeClass="is-sticky"
+        innerZ={100}
+        onStateChange={handleStateChange}
+      >
+        <header
+          sx={styles.header}
+          className={state.isSticky ? 'is-sticky' : ''}
+        >
+          <Container sx={styles.container}>
+            <Logo isSticky={state.isSticky} sx={styles.logo} />
+            <nav as="nav" sx={styles.navbar}>
+              {menuItems.map(({ path, label }, i) => (
+                <NavLink
+                  key={i}
+                  path={path}
+                  label={label}
+                  className={state.isSticky ? 'is-sticky' : ''}
+                />
+              ))}
+            </nav>
+            <Button variant="primary" sx={styles.button}     onClick={handleClick}> 
+              Purchase Now
+            </Button>
+            <NavbarDrawer isSticky={state.isSticky} />
+          </Container>
+        </header>
+      </Sticky>
     </DrawerProvider>
   );
 }
 
 const styles = {
   header: {
-    color: 'text_white',
-    fontWeight: 'normal',
-    py: [4, null, null, '25px'],
-    width: '100%',
-    position: 'fixed',
-    top: 0,
-    left: 0,
     backgroundColor: 'transparent',
-    transition: 'all 0.4s ease',
-
-    '&.sticky': {
-      backgroundColor: 'background',
-      color: 'text',
-      py: '15px',
-      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
+    position: 'fixed',
+    left: 0,
+    right: 0,
+    py: [5],
+    transition: 'all 0.3s ease-in-out 0s',
+    '&.is-sticky': {
+      backgroundColor: 'white',
+      boxShadow: '0px 20px 50px rgba(59, 90, 136, 0.05)',
+      py: [3],
     },
   },
   container: {
@@ -62,23 +80,30 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  nav: {
-    ml: 'auto',
-    display: ['none', null, null, null, 'block'],
-    navLink: {
-      fontSize: '16px',
-      color: '#0F2137',
-      fontWeight: '400',
+  navbar: {
+    display: ['none', null, null, null, 'flex'],
+    alignItems: 'center',
+    a: {
+      color: 'white',
       cursor: 'pointer',
-      lineHeight: '1.2',
-      mr: '48px',
-      transition: '500ms',
-      ':last-child': {
-        mr: '0',
-      },
-      '&:hover, &.active': {
-        textShadow: '0 0 1px #0F2137',
+      display: ['flex'],
+      fontWeight: 400,
+      padding: 0,
+      transition: 'all 0.3s ease-in-out 0s',
+      '+ a': {
+        ml: [null, null, null, null, 4, 7],
       },
     },
+    '.is-sticky': {
+      color: 'text',
+    },
+    '.active': {
+      color: 'primary',
+    },
+  },
+  button: {
+    display: ['none', null, null, null, 'inline-flex'],
+    minHeight: 45,
+    px: '18px',
   },
 };

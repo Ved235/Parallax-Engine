@@ -1,5 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, Box } from 'theme-ui';
 import React, { Fragment } from 'react';
-import { Box } from 'theme-ui';
 import RcDrawer from 'rc-drawer';
 
 const Drawer = ({
@@ -38,7 +40,7 @@ const Drawer = ({
       </RcDrawer>
       <Box
         className="drawer__handler"
-        style={{ display: 'inline-block' }}
+        sx={{ display: [null, null, null, null, 'none'] }}
         onClick={toggleHandler}
       >
         {drawerHandler}

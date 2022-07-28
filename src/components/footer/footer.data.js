@@ -1,125 +1,77 @@
-const FOOTER_DATA = [
+export const menuItems = [
   {
+    id: 1,
     title: 'Company',
-    menuItem: [
+    items: [
       {
-        link: '#',
-        label: 'About team',
+        path: '#!',
+        label: 'About',
       },
       {
-        link: '#',
-        label: 'Affiliate center',
-      },
-      {
-        link: '#',
-        label: 'Careers & Culture',
-      },
-      {
-        link: '#',
-        label: 'Blog news',
-      },
-      {
-        link: '#',
-        label: 'Press & media',
-      },
+        path: '#!',
+        label: 'Affiliate',
+      }
     ],
   },
   {
+    id: 2,
     title: 'About Us',
-    menuItem: [
+    items: [
       {
-        link: '#',
+        path: '#!',
         label: 'Support Center',
       },
       {
-        link: '#',
+        path: '#!',
         label: 'Customer Support',
-      },
-      {
-        link: '#',
-        label: 'About Us',
-      },
-      {
-        link: '#',
-        label: 'Copyright',
-      },
-      {
-        link: '#',
-        label: 'Popular Campaign',
-      },
+      }
     ],
   },
   {
+    id: 3,
     title: 'Our Information',
-    menuItem: [
+    items: [
       {
-        link: '#',
+        path: '#!',
         label: 'Return Policy ',
       },
       {
-        link: '#',
+        path: '#!',
         label: 'Privacy Policy',
       },
-      {
-        link: '#',
-        label: 'Terms & Conditions',
-      },
-      {
-        link: '#',
-        label: 'Site Map',
-      },
-      {
-        link: '#',
-        label: 'Store Hours',
-      },
+      
     ],
   },
   {
+    id: 4,
     title: 'My Account',
-    menuItem: [
+    items: [
       {
-        link: '#',
+        path: '#!',
         label: 'Press inquiries',
       },
       {
-        link: '#',
-        label: 'Social media',
+        path: '#!',
+        label: 'Social media ',
       },
-      {
-        link: '#',
-        label: 'directories',
-      },
-      {
-        link: '#',
-        label: 'Images & B-roll',
-      },
-      {
-        link: '#',
-        label: 'Permissions',
-      },
+      
     ],
   },
   {
+    id: 5,
     title: 'Policy',
-    menuItem: [
+    items: [
       {
-        link: '#',
+        path: '#!',
         label: 'Application security',
       },
       {
-        link: '#',
+        path: '#!',
         label: 'Software principles',
       },
-      {
-        link: '#',
-        label: 'Unwanted software policy',
-      },
-      {
-        link: '#',
-        label: 'Responsible supply chain',
-      },
+
     ],
   },
 ];
 
-export default FOOTER_DATA;
+

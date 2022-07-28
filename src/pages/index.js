@@ -1,37 +1,31 @@
-import dynamic from 'next/dynamic';
-const Seo = dynamic(import('components/seo'));
-const Layout = dynamic(import('components/layout'));
-const Banner = dynamic(import('sections/banner'));
-const WhyChoose = dynamic(import('sections/why-choose'));
-const SalesInvestment = dynamic(import('sections/sales-investment'));
-const RoadMap = dynamic(import('sections/roadmap'));
-const CountDownBlock = dynamic(import('sections/countdown'));
-const WorldwideUsers = dynamic(import('sections/worldwide-user'));
-const OurWallet = dynamic(import('sections/our-wallet'));
-const CallToAction = dynamic(import('sections/call-to-action'));
+import React from 'react';
 import { ThemeProvider } from 'theme-ui';
-import { StickyProvider } from 'contexts/app/app.provider';
 import theme from 'theme';
+import SEO from 'components/seo';
+import Layout from 'components/layout';
+import Banner from 'sections/banner';
+import Security from 'sections/security';
+import Addons from 'sections/addons';
+import MobileApp from 'sections/mobile-app';
+import Dashboard from 'sections/dashboard';
+import UltimateFeatures from 'sections/ultimate-features';
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-      <StickyProvider>
-        <Layout>
-          <Seo
-            title="Parallax Engine"
-            description="Collection of free top of the line startup landing templates built using react/ next js. Free to download, simply edit and deploy! Updated weekly!"
-          />
-          <Banner />
-          <WhyChoose />
-          <SalesInvestment />
-          <RoadMap />
-          <CountDownBlock />
-          <WorldwideUsers />
-          <OurWallet />
-          <CallToAction />
-        </Layout>
-      </StickyProvider>
+      <Layout>
+        <SEO
+          title="Parallax Engine"
+          description="Stock Prediction and Analysis using A.I and data science"
+        />
+        <Banner />
+        <Security />
+        <Addons />
+        <Dashboard />
+        <UltimateFeatures />
+        <MobileApp />
+
+      </Layout>
     </ThemeProvider>
   );
 }

@@ -1,189 +1,112 @@
 export default {
-  breakpoints: [
-    '480px',
-    '640px',
-    '768px',
-    '1024px',
-    '1220px',
-    '1366px',
-    '1620px',
-  ],
-  space: [0, 5, 10, 15, 20, 25, 30, 50, 80, 100, 120, 150],
   // example colors with dark mode
   colors: {
-    text: '#02073E', // body color and primary color
-    text_secondary: '#676A8B', // secondary body color
-    heading: '#02073E', // primary heading color
-    heading_secondary: '#161718', // heading color
+    text: '#343D48', // body color and primary color
+    textSecondary: '#02073E', // secondary body color
+    heading: '#0F2137', // primary heading color
+    headingSecondary: '#343D48', // heading color
     background: '#FFFFFF', // body background color
-    background_secondary: '#F9FBFD', // secondary background color
-    border_color: '#E9EDF5', // border color
-    primary: '#3CC68A', // primary button and link color
-    secondary: '#30c', // secondary color - can be used for hover states
+    backgroundSecondary: '#F9FAFC', // secondary background color
+    borderColor: '#E9EDF5', // border color
+    primary: '#5567FF', // primary button and link color
+    secondary: '#10132D', // secondary color - can be used for hover states
     muted: '#7B8188', // muted color
     accent: '#609', // a contrast color for emphasizing UI
+    dark: '#10132D',
+    link: '#3183FF',
   },
   fonts: {
-    body: 'DM Sans',
-    heading: 'DM Sans',
-    archivo: 'Archivo',
+    body: 'DM Sans, sans-serif',
+    // body:
+    //   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'DM Sans, sans-serif',
+    monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  fontSizes: [
+    12, // 0
+    14, // 1
+    16, // 2
+    18, // 3
+    20, // 4
+    22, // 5
+    24, // 6
+    26, // 7
+    28, // 8
+    30, // 9
+    32, // 10
+    36, // 11
+    40, // 12
+    42, // 13
+    48, // 14
+    52, // 15
+    55, // 16
+    60, // 17
+    64, // 18
+  ],
   fontWeights: {
     body: 'normal',
+    // body: 400,
     heading: 500,
+    // heading: 700,
     bold: 700,
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    // body: 1.5,
+    heading: 1.25,
+    // heading: 1.125,
   },
   letterSpacings: {
     body: 'normal',
     caps: '0.2em',
     heading: '-0.5px',
   },
+  space: [
+    0, // 0
+    5, // 1
+    10, // 2
+    15, // 3
+    20, // 4
+    25, // 5
+    30, // 6
+    35, // 7
+    40, // 8
+    45, // 9
+    50, // 10
+    55, // 11
+    60, // 12
+    65, // 13
+    70, // 14
+    80, // 15
+    90, // 16
+    100, // 17
+    110, // 18
+    120, // 19
+    130, // 20
+    140, // 21
+    150, // 22
+    160, // 23
+  ],
+  sizes: {},
+  breakpoints: ['480px', '640px', '768px', '1024px', '1260px', '1367px'],
   // variants can use custom, user-defined names
   layout: {
     container: {
-      maxWidth: [
-        '100%',
-        null,
-        null,
-        '780px',
-        '1020px',
-        '1200px',
-        null,
-        '1350px',
-      ],
-      px: [4, null, 5, 6],
-    },
-    header: {
-      color: '#02073E',
-      fontWeight: 'normal',
-      py: 3,
-    },
-    toolbar: {
-      display: 'flex',
-      alignItems: 'center',
-      // justifyContent: 'space-between',
+      maxWidth: ['100%', null, null, '720px', '970px', '1140px', '1260px'],
+      paddingLeft: [6],
+      paddingRight: [6],
+      m: '0 auto',
     },
     main: {},
-    footer: {
-      backgroundColor: 'background_secondary',
-    },
-  },
-  section: {
-    banner: {
-      borderTop: (t) => `1px solid ${t.colors.border_color}`,
-      borderBottom: (t) => `1px solid ${t.colors.border_color}`,
-      backgroundColor: 'background_secondary',
-      py: [3, 5],
-    },
-    feature: {
-      py: 5,
-    },
-    workflow: {
-      py: 5,
-    },
-    product: {
-      borderTop: (t) => `1px solid ${t.colors.border_color}`,
-      borderBottom: (t) => `1px solid ${t.colors.border_color}`,
-      backgroundColor: 'background_color',
-      py: 5,
-    },
-    offer: {
-      py: 5,
-    },
-    package: {
-      py: 5,
-    },
-    support: {
-      py: 5,
-    },
-    testimonial: {
-      py: 5,
-    },
-    faq: {
-      py: 5,
-    },
   },
   text: {
     heading: {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 4,
-      letterSpacing: 'heading',
-      color: 'heading',
-    },
-    heroPrimary: {
-      fontSize: [5, 55],
-      fontWeight: 'normal',
-      lineHeight: ['40px', '80px'],
-      letterSpacing: '-1px',
-      textAlign: ['center', 'left'],
-    },
-    title: {
-      // extends the text.heading styles
-      variant: 'text.heading',
-      // fontSize: [6, 7, 8],
-      // fontWeight: 'display',
-      fontWeight: 'bold',
-      fontSize: 18,
-      lineHeight: '30px',
-      color: '#0F2137',
-    },
-    heroSecondary: {
-      color: 'text_secondary',
-      lineHeight: ['30px', '42px'],
-      letterSpacing: '0.1em',
-      textAlign: ['center', 'left'],
-    },
-    lead: {
-      fontSize: 40,
-      fontFamily: 'DM Sans',
-      fontWeight: '500',
-      lineHeight: '60px',
-      letterSpacing: '-1.5px',
-      color: '#0F2137',
-    },
-    muted: {
-      lineHeight: '26px',
-      color: 'muted',
-    },
-    secondary: {
-      fontWeight: 500,
-      color: '#00A99D',
-      lineHeight: '40px',
     },
   },
-  links: {
-    bold: {
-      fontWeight: 'bold',
-    },
-    nav: {
-      display: ['none', null, 'inline-block'],
-      p: 2,
-      // transitionProperty: 'background-color',
-      // transitionTimingFunction: 'ease-out',
-      // transitionDuration: '.2s',
-      // borderRadius: 2,
-      // '&:hover': {
-      //   bg: 'highlight',
-      // },
-      // '&.active': {
-      //   color: 'primary',
-      //   bg: 'highlight',
-      // },
-    },
-    footer: {
-      display: 'block',
-      px: 0,
-      color: 'inherit',
-      textDecoration: 'none',
-    },
-  },
+  links: {},
   images: {
     avatar: {
       width: 48,
@@ -193,26 +116,59 @@ export default {
   },
   // variants for buttons
   buttons: {
-    menu: {
-      display: [null, null, 'none'],
-    }, // default variant for MenuButton
-    // you can reference other values defined in the theme
-    primary: {
+    default: {
+      backgroundColor: 'transparent',
+      fontFamily: 'body',
       fontWeight: 'bold',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      transition: '0.3s ease-in-out 0s',
+      whiteSpace: 'nowrap',
+    },
+    primary: {
+      variant: 'buttons.default',
       color: 'white',
       bg: 'primary',
-      '&:hover': {
-        bg: 'dark',
-      },
+      minHeight: '45px',
+      padding: '0 18px',
+    },
+    outlined: {
+      variant: 'buttons.default',
+      border: `2px solid`,
+      color: 'secondary',
+      minHeight: '45px',
+      padding: '0 18px',
+    },
+    primaryMd: {
+      variant: 'buttons.primary',
+      minHeight: '50px',
+      px: '25px',
     },
     secondary: {
-      color: 'text',
+      variant: 'buttons.primary',
+      color: 'white',
       bg: 'secondary',
     },
+    muted: {
+      variant: 'buttons.default',
+      backgroundColor: '#EDF0F2',
+      color: 'text',
+      ':hover': {
+        backgroundColor: 'primary',
+        color: '#fff',
+      },
+    },
+    white: {
+      variant: 'buttons.default',
+      backgroundColor: 'white',
+      color: '#020718',
+    },
     text: {
-      backgroundColor: 'transparent',
-      color: '#3183FF',
-      pl: 0,
+      variant: 'buttons.default',
+      color: 'text',
     },
   },
   cards: {
@@ -247,8 +203,11 @@ export default {
     },
     input: {
       borderRadius: 8,
-      borderColor: 'border_color',
-      height: 60,
+      borderColor: 'borderColor',
+      fontFamily: 'body',
+      px: 5,
+      py: 0,
+      minHeight: 60,
       '&:focus': {
         borderColor: 'primary',
         boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
@@ -280,23 +239,34 @@ export default {
       lineHeight: 'body',
       fontWeight: 'body',
       WebkitFontSmoothing: 'antialiased',
-      backgroundColor: 'white',
-      color: 'text',
-      a: {
-        cursor: 'pointer',
-        textDecoration: 'none',
-      },
-      '.modal-video-close-btn': {
-        cursor: 'pointer',
-        top: '-25px',
-        right: '-25px',
-        width: ' 25px',
-        height: '25px',
-      },
-      '.modal-video-movie-wrap': {
-        margin: 6,
-        width: 'auto',
-      },
+      MozOsxFontSmoothing: 'grayscale',
+    },
+    // h1-h6 Heading styles
+    h1: {
+      // fontFamily: 'none',
+      // variant: 'text.heading',
+      // fontSize: 6,
+    },
+    h2: {
+      // fontFamily: 'none',
+      // variant: 'text.heading',
+      // fontSize: 5,
+    },
+    h3: {
+      variant: 'text.heading',
+      fontSize: 4,
+    },
+    h4: {
+      variant: 'text.heading',
+      fontSize: 3,
+    },
+    h5: {
+      variant: 'text.heading',
+      fontSize: 2,
+    },
+    h6: {
+      variant: 'text.heading',
+      fontSize: 1,
     },
     // Divider styles
     hr: {
@@ -305,8 +275,10 @@ export default {
       borderColor: '#D9E0E7',
     },
     // also you can use other HTML elements style here
-    ul: {
+    unStyled: {
       listStyle: 'none',
+      p: 0,
+      m: 0,
     },
     srOnly: {
       border: '0 !important',
