@@ -18,6 +18,7 @@ const Security = () => {
             title="Privacy! That’s Parallax Engine"
             description="Our data centers have top-notch security and surveillance, with a reliable 99.9% uptime.We value the privacy and cofidentialy of our clients. No data is collected for any pruposes."
             learnMore="Privacy Policy"
+            moreLink="privacy-policy"
           />
         </Box>
       </Container>
