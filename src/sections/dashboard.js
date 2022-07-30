@@ -10,34 +10,23 @@ import Cog from 'components/icons/cog';
 import Currency from 'components/icons/currency';
 import Briefcase from 'components/icons/briefcase';
 import TabButton from 'components/tabs/tab-button';
-
+import Trader from 'assets/images/Trader.jpeg';
+import BudgetTracker from 'assets/images/BudgetTracker.jpeg';
 import taskManager from 'assets/images/task-manager.png';
 
 const data = [
   {
     id: 1,
-    title: 'Analysis',
+    title: 'Report',
     icon: <PieChart />,
-    image: taskManager,
+    image: BudgetTracker,
   },
   {
     id: 2,
     title: 'Trading',
     icon: <Cog />,
-    image: taskManager,
-  },
-  {
-    id: 3,
-    title: 'Report',
-    icon: <Currency />,
-    image: taskManager,
-  },
-  {
-    id: 4,
-    title: 'Budget tracker',
-    icon: <Briefcase />,
-    image: taskManager,
-  },
+    image: Trader,
+  }
 ];
 
 const Dashboard = () => {
