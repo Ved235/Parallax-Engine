@@ -22,7 +22,7 @@ export default function Header() {
   };
   const handleClick = (e) => {
     e.preventDefault();
-    window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0")
+    window.open("https://www.buymeacoffee.com/parallaxengine")
   };
 
   return (

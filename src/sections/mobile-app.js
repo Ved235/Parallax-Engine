@@ -6,6 +6,7 @@ import Image from 'components/image';
 import app from 'assets/images/app.png';
 import appStore from 'assets/images/app-store.png';
 import googlePlay from 'assets/images/google-play.png';
+import { Link } from 'components/link';
 
 const MobileApp = () => {
   return (
@@ -22,8 +23,8 @@ const MobileApp = () => {
               description="Carry the world’s most powerful stock analysis engine withing your pocket. Unleash its power with the click of a button."
             />
             <Flex sx={styles.buttonGroup}>
-              <Img src={appStore} alt="appStore" />
-              <Img src={googlePlay} sx={{ ml: 3 }} alt="googlePlay" />
+             <a href="https://play.google.com/store/apps/developer?id=Vedant+Singhal"><Img src={appStore} alt="appStore" /></a>
+             <a href="https://play.google.com/store/apps/developer?id=Vedant+Singhal"> <Img src={googlePlay} sx={{ ml: 3 }} alt="googlePlay" /></a>
             </Flex>
           </Box>
         </Box>
