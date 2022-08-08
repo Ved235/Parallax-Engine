@@ -26,7 +26,7 @@ const Banner = () => {
       <Container sx={styles.container}>
         <div sx={styles.content}>
           <Heading as="h1">
-          Welcome to next level Stock Analysis with Parralax 
+          Welcome to next level Stock Analysis with Parallax 
           </Heading>
           <Text as="p">Simple: We will increase your profits</Text>
           <Flex sx={styles.buttonGroup}>
